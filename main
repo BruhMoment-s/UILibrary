@@ -603,7 +603,7 @@ ScrollingFrame_2.ScrollingDirection = Enum.ScrollingDirection.X
 UIListLayout_2.Padding = UDim.new(0,5)
 homeTabUI()
 DragSettings()
-Initiate()
+
 
 
 
