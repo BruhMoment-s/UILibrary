@@ -294,14 +294,6 @@ local function HOWLK_fake_script() -- min.LocalScript
 	
 end
 coroutine.wrap(HOWLK_fake_script)()
-coroutine.wrap(MainUI)()
-
-
-
-
-
-
-
 
 function makeTabButton(text,tab)
 	local exampleBUtton = Instance.new("TextButton")
@@ -612,7 +604,6 @@ UIListLayout_2.Padding = UDim.new(0,5)
 homeTabUI()
 DragSettings()
 MainUI()
-
 
 
 
