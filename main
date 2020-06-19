@@ -356,7 +356,7 @@ Button2.Size = UDim2.new(0.899999976, 0, 0, 80)
 	
 	
 ScriptButton2.Name = "ScriptButton"
-ScriptButton2.Parent = Button
+ScriptButton2.Parent = Button2
 ScriptButton2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ScriptButton2.BackgroundTransparency = 1.000
 ScriptButton2.Size = UDim2.new(1, 0, 1, 0)
