@@ -322,7 +322,7 @@ exampleBUtton.Text = text
 	end)
 	
 end
-MakeTab = function(name)
+function MakeTab(name)
 	local scroll = ScrollingFrame:Clone()
 	scroll.Visible = false
 	scroll.Name = name
@@ -336,7 +336,7 @@ MakeTab = function(name)
 	scroll.CanvasPosition = Vector2.new(0,0)
 end
 
-MakeButton = function(tab,text,code)
+function MakeButton(tab,text,code)
 	local Button2 = Instance.new("Frame")
 	local ScriptButton2 = Instance.new("TextButton")
 	
@@ -367,7 +367,7 @@ mainUI[tab].CanvasSize = mainUI[tab].CanvasSize + UDim2.new(0, 0, 0, 80)
 end
 
 
-MakeToggle = function(tab,text,code)
+ function MakeToggle (tab,text,code)
 local Toggle2 = Instance.new("Frame")
 local ToggleFrame2 = Instance.new("ImageLabel")
 local FrameButton2 = Instance.new("TextButton")
@@ -457,7 +457,7 @@ end)
 	
 end
 
-MakeTexbox = function(tab,text,code)
+function MakeTexbox(tab,text,code)
 local TextBox2 = Instance.new("Frame")
 local TextboxButton2 = Instance.new("TextButton")
 local TextBox_22 = Instance.new("TextBox")	
@@ -504,7 +504,7 @@ shared.loadstring("local txt = '".. ctext .. "'\n".. code)()
 	
 end
 
-local MakeText = function(tab,text)
+function MakeText(tab,text)
 	local TextLab2 = Instance.new("Frame")
 	local TextLabe2 = Instance.new("TextButton")
 	
@@ -581,7 +581,7 @@ end
 
 
 
-DragSettings = function()
+ function DragSettings()
 	if UISettings.DragType == "Smooth" then
 		dragify(framethingburhmomento,framethingburhmomento)
 		dragify(tittle,framethingburhmomento)
