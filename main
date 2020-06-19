@@ -260,7 +260,7 @@ local function KOKN_fake_script() -- close.LocalScript
 	local script = Instance.new('LocalScript', close)
 
 	script.Parent.MouseButton1Down:Connect(function()
-		script.Parent.Parent:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	
 	end)
 	
@@ -323,17 +323,24 @@ exampleBUtton.Text = text
 	
 end
 function MakeTab(name)
-	local scroll = ScrollingFrame:Clone()
-	scroll.Visible = false
-	scroll.Name = name
+	local ScrollingFrame2 = Instance.new("ScrollingFrame")
+	local UIListLayout = Instance.new("UIListLayout")
 	
-	for i,v in pairs(scroll:GetChildren()) do
-		if v.Name ~= "UIListLayout" then
-			v:Destroy()
-		end
-	end
-	scroll.CanvasSize = UDim2.new(0, 0,2, 0)
-	scroll.CanvasPosition = Vector2.new(0,0)
+ScrollingFrame2.Parent = mainUI
+ScrollingFrame2.Active = true
+ScrollingFrame2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame2.BackgroundTransparency = 1.000
+ScrollingFrame2.BorderSizePixel = 0
+ScrollingFrame2.Position = UDim2.new(0, 0, 0.0449146219, 0)
+ScrollingFrame2.Size = UDim2.new(1, 0, 0.955085397, 0)
+ScrollingFrame2.Visible = false
+ScrollingFrame2.Name = name
+	
+	UIListLayout.Parent = ScrollingFrame2
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	
+	ScrollingFrame2.CanvasSize = UDim2.new(0, 0,2, 0)
+	ScrollingFrame2.CanvasPosition = Vector2.new(0,0)
 end
 
 function MakeButton(tab,text,code)
